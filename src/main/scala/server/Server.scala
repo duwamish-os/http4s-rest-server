@@ -10,8 +10,8 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 object Server extends StreamApp[IO] with Http4sDsl[IO] {
   val service = HttpService[IO] {
-    case GET -> Root / "api" / name =>
-      Ok(s"hello $name")
+    case GET -> Root / "api" / "customer" / customerID =>
+      Ok(s"welcome to sellpeace.com, Mr. $customerID")
   }
 
   def stream(args: List[String], requestShutdown: IO[Unit]): fs2.Stream[IO, StreamApp.ExitCode] =
