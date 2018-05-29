@@ -6,14 +6,18 @@ java -jar target/scala-2.12/http4s-hello-server.jar
 ```
 
 ```bash
-$ curl --request POST -d '{"correlationId": "1", "utterance": "coffee near me"}' localhost:8080/api/chat
-{"correlationId":"1","displayText":"hi, how can i help you?"}
-
+curl -H "correlationId: 1234" localhost:8080/api/chat/history/prayagupd
+{"correlationId":"","history":["hi, how can i help you?","here is coffee shop"]}
 ```
 
+```bash
+$ curl -H "correlatioId: 1234" localhost:8080/api/chat/history/prayagupd
+{"correlationId":"","history":["hi, how can i help you?","here is coffee shop"]}
 ```
-curl localhost:8080/api/chat/prayagupd
-{"body":"welcome to sellpeace.com, Mr. prayagupd"}
-```
+
+TODO
+----
+
+- create separate jar for API schema
 
 ![](perf.png)
