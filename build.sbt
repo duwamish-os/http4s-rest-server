@@ -4,7 +4,7 @@ version := "1.0"
 
 scalaVersion := "2.12.6"
 
-val http4sVersion = "0.18.12"
+val http4sVersion = "0.18.16"
 
 // Only necessary for SNAPSHOT releases
 resolvers += Resolver.sonatypeRepo("snapshots")
