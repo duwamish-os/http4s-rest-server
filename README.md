@@ -2,6 +2,8 @@ http4s REST server
 ------------------
 
 ```
+// sbt run
+
 java -jar target/scala-2.12/http4s-hello-server.jar
 ```
 
